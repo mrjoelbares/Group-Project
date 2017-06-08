@@ -12,7 +12,7 @@ using namespace std;
 class Book
 {
 protected:
-	string ISBN;
+	int ISBN;
 	string title;
 	string author;
 	string publisher;
@@ -22,14 +22,12 @@ protected:
 	double retailPrice;
 	double subtotal;
 	double tax;
+	double total;
 	const double TAX_RATE = 0.08;
 public:
 	// Accessors / mutators
 	// default constructor
-	Book()
-	{
-		cout << "Nothing entered" << endl;
-	}
+	Book();
 
 	// constructor
 	Book(string, string, string, string, string, int, double, double);
@@ -40,7 +38,7 @@ public:
 		cout << title << " deleted" << endl;
 	}
 
-	void setISBN(string isbn);
+	void setISBN(int isbn);
 
 	void setTitle(string t);
 
