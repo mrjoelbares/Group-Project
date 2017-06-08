@@ -1,6 +1,6 @@
 // Joel Bares, Ernie Hung, Christian Magpantay
 
-#define_CRT_SECURE_NO_WARINGS
+#define CRT_SECURE_NO_WARINGS
 
 #include <iostream>
 #include <string>
@@ -11,8 +11,22 @@
 using namespace std;
 
 
+Book::Book()
+{
+	ISBN = 0;
+	title = "";
+	author = "";
+	publisher = "";
+	dateAdded = "";
+	quantity = 0;
+	wholesale = 0.0;
+	retailPrice = 0.0;
+	subtotal = 0.0;
+	tax = 0.0;
+	total = 0.0;
+}
 
-void Book::setISBN(string isbn)
+void Book::setISBN(int isbn)
 {
 	ISBN = isbn;
 }
